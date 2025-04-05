@@ -1,0 +1,206 @@
+
+:root {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --card-bg: #1e1e1e;
+    --btn-bg: #007bff;
+    --btn-text: #ffffff;
+    --section-bg: #1a1a1a;
+    --border-color: #333333;
+}
+
+[data-theme="light"] {
+    --bg-color: #f8f9fa;
+    --text-color: #212529;
+    --card-bg: #ffffff;
+    --btn-bg: #007bff;
+    --btn-text: #ffffff;
+    --section-bg: #ffffff;
+    --border-color: #dddddd;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h5 {
+    font-weight: bold;
+}
+
+p, a, .card-text {
+    font-weight: 500;
+}
+
+.card {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    border: none;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    opacity: 0.9;
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--btn-bg);
+    color: var(--btn-text);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1000;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-toggle:hover {
+    opacity: 0.9;
+}
+
+.hero {
+    background: linear-gradient(to right, #007bff, #6610f2);
+    color: var(--text-color);
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/images/hero-bg.jpg') no-repeat center center/cover; /* Corrected path */
+    opacity: 0.2;
+    z-index: -1;
+}
+
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.section-title {
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    position: relative;
+    color: var(--text-color);
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--btn-bg);
+    margin: 10px auto 0;
+}
+
+.project-card {
+    margin-bottom: 30px;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-img {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px 5px 0 0;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: var(--btn-bg);
+}
+
+.contact-info a {
+    color: var(--btn-bg);
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+section {
+    background-color: var(--section-bg);
+    padding: 50px 0;
+    transition: background-color 0.3s ease;
+}
+
+footer {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    padding: 20px 0;
+    text-align: center;
+}
+        .education-card {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.education-card h5 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.education-card .degree {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.education-card .timeline {
+    font-size: 0.9rem;
+    color: var(--btn-bg);
+    font-weight: 500;
+}
